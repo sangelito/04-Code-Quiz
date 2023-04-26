@@ -1,3 +1,4 @@
+// Defining global variables that will be used
 var quizBody = document.getElementById("Quiz");
 var resultsEl = document.getElementById("result");
 var finalScoreEl = document.getElementById("finalScore");
@@ -18,6 +19,7 @@ var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
+// Questions for quiz
 var quizQuestions = [{
   question: "A very useful tool for used during development and debugging for printing content to the debugger is:",
   choiceA: "Javascript",
