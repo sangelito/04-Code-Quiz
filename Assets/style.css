@@ -1,3 +1,10 @@
 body {
     background-color: #F6FFDE
   }
+
+  p{
+    color: black; 
+    text-align: center; 
+    font-size: xx-large;
+    font-family: sans-serif;
+  }
