@@ -13,3 +13,13 @@ body {
     font-size: xx-large;
     font-family: sans-serif;
   }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
