@@ -59,7 +59,10 @@ body {
     font-size: x-large;
     text-align: center;
 }
-  
 
+#gameover{
+    text-align: center;
+    flex-direction: column;
 
-  
+}
+
