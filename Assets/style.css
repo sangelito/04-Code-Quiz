@@ -74,3 +74,13 @@ body {
     background: #E3F2C1;
 }
 
+#highscore-header{
+    display:flex;
+    justify-content: space-around;
+    border-bottom-style: outset;
+    margin-bottom: .5rem;
+    background-color: #E3F2C1;
+    color: black;
+    font-family: sans-serif;
+}
+
