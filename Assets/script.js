@@ -70,3 +70,11 @@ var quizQuestions = [{
   choiceD: "index",
   correctAnswer: "b"},
 ];
+
+
+//Start Quiz function 
+function startQuiz{
+  gameoverDiv.style.display = "none"
+  startQuizDiv.style.display ="none"
+  generateQuizQuestion();
+}
