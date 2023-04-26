@@ -45,3 +45,14 @@ body {
   button:hover{
     background-color: #C9DBB2;
   }
+
+  #startpage{
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+
+  
