@@ -104,6 +104,8 @@ body {
     font-weight: bold;
 }
 
-#endGameButtons{
-
+#choices{
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
 }
