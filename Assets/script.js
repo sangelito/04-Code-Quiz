@@ -122,6 +122,48 @@ function showScore(){
   finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
 }
 
+//generates highscore list 
+function generateHighscores(){
+  highscoreDisplayName.innerHTML = "";
+  highscoreDisplayScore.innerHTML = "";
+  var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+  for (i=0; i<highscores.length; i++){
+      var newNameSpan = document.createElement("li");
+      var newScoreSpan = document.createElement("li");
+      newNameSpan.textContent = highscores[i].name;
+      newScoreSpan.textContent = highscores[i].score;
+      highscoreDisplayName.appendChild(newNameSpan);
+      highscoreDisplayScore.appendChild(newScoreSpan);
+  }
+}
+
+//saves score into local storage 
+submitScoreBtn.addEventListener("click", function highscore(){
+    
+    
+  if(highscoreInputName.value === "") {
+      alert("Initials cannot be blank");
+      return false;
+  }else{
+      var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+      var currentUser = highscoreInputName.value.trim();
+      var currentHighscore = {
+          name : currentUser,
+          score : score
+      };
+  
+      gameoverDiv.style.display = "none";
+      highscoreContainer.style.display = "flex";
+      highscoreDiv.style.display = "block";
+      endGameBtns.style.display = "flex";
+      
+      savedHighscores.push(currentHighscore);
+      localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+      generateHighscores();
+
+  }
+  
+});
 // Checks answer to Q
 function checkAnswer (answer){correct = quizQuestions[currentQuestionIndex].correctAnswer;
 
