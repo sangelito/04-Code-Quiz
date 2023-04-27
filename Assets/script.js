@@ -113,6 +113,15 @@ function startQuiz() {
  quizBody.style.display="Block"; 
 }
 
+//Score Keeper 
+function showScore(){
+  quizBody.style.display = "none"
+  gameoverDiv.style.display = "flex";
+  clearInterval(timerInterval);
+  highscoreInputName.value = "";
+  finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
+}
+
 // Checks answer to Q
 function checkAnswer (answer){correct = quizQuestions[currentQuestionIndex].correctAnswer;
 
