@@ -21,7 +21,7 @@ var buttonD = document.getElementById("d");
 
 // Questions for quiz
 var quizQuestions = [{
-  question: "A very useful tool for used during development and debugging for printing content to the debugger is:",
+  question:"A very useful tool for used during development and debugging for printing content to the debugger is:",
   choiceA: "Javascript",
   choiceB: "HTML",
   choiceC: "console log",
@@ -111,6 +111,26 @@ function startQuiz() {
   
 
  quizBody.style.display="Block"; 
+}
+
+// Checks answer to Q
+function checkAnswer (answer){correct = quizQuestions[currentQuestionIndex].correctAnswer;
+
+  if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
+      score++;
+      alert("That Is Correct!");
+      currentQuestionIndex++;
+      generateQuizQuestion();
+      //display in the results div that the answer is correct.
+  }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
+      alert("That Is Incorrect.")
+      currentQuestionIndex++;
+      generateQuizQuestion();
+      //display in the results div that the answer is wrong.
+  }else{
+      showScore();
+  }
+  
 }
 
 // This button starts the quiz!
