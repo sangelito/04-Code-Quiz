@@ -183,7 +183,12 @@ function checkAnswer (answer){correct = quizQuestions[currentQuestionIndex].corr
   }
   
 }
-
+// clear scores 
+function clearScore(){
+  window.localStorage.clear();
+  highscoreDisplayName.textContent = "";
+  highscoreDisplayScore.textContent = "";
+}
 // This button starts the quiz!
 startQuizButton.addEventListener("click",startQuiz);
 
