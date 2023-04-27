@@ -3,7 +3,7 @@ var quizBody = document.getElementById("Quiz");
 var resultsEl = document.getElementById("result");
 var finalScoreEl = document.getElementById("finalScore");
 var gameoverDiv = document.getElementById("gameover");
-var questionsEl = document.getElementById("questions");
+var questionsEl = document.getElementById("qs");
 var quizTimer = document.getElementById("timer");
 var startQuizButton = document.getElementById("startbtn");
 var startQuizDiv = document.getElementById("startpage");
@@ -86,7 +86,7 @@ function generateQuizQuestion(){
     return showScore();
 } 
 var currentQuestion = quizQuestions[currentQuestionIndex];
-    questionsEl = "<p>" + currentQuestion.question + "</p>";
+    questionsEl,innerHTML = "<p>" + currentQuestion.question + "</p>";
     buttonA.innerHTML = currentQuestion.choiceA;
     buttonB.innerHTML = currentQuestion.choiceB;
     buttonC.innerHTML = currentQuestion.choiceC;
