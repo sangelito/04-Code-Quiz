@@ -86,7 +86,7 @@ function generateQuizQuestion(){
     return showScore();
 } 
 var currentQuestion = quizQuestions[currentQuestionIndex];
-    questionsEl,innerHTML = "<p>" + currentQuestion.question + "</p>";
+    questionsEl.innerHTML = "<p>" + currentQuestion.question + "</p>";
     buttonA.innerHTML = currentQuestion.choiceA;
     buttonB.innerHTML = currentQuestion.choiceB;
     buttonC.innerHTML = currentQuestion.choiceC;
