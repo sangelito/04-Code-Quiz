@@ -189,6 +189,17 @@ function clearScore(){
   highscoreDisplayName.textContent = "";
   highscoreDisplayScore.textContent = "";
 }
+
+//play again 
+function replayQuiz(){
+  highscoreContainer.style.display = "none";
+  gameoverDiv.style.display = "none";
+  startQuizDiv.style.display = "flex";
+  timeLeft = 76;
+  score = 0;
+  currentQuestionIndex = 0;
+}
+
 // This button starts the quiz!
 startQuizButton.addEventListener("click",startQuiz);
 
